@@ -1,0 +1,39 @@
+name: Release
+
+on:
+  push:
+    tags:
+     - v*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.0
+        with:
+          node-version: 20
+
+      - name: Get Dependencies
+        run: npm ci
+
+      - name: Build Compendiums
+        run: npm run build:db
+
+      - name: Build Module Package
+        run: zip -r ./slams-helpers.zip module.json lang/ scripts/ templates/ css/ assets/ packs/
+
+    # Create a release for this specific version
+      - name: Update Release with Files
+        id: create_version_release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "./module.json, ./slams-helpers.zip"
+

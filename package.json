@@ -1,0 +1,20 @@
+{
+  "name": "fvtt-slams-helpers",
+  "version": "0.0.1",
+  "description": "Misc Foundry Macro helpers, and automation",
+  "main": "index.js",
+  "scripts": {
+    "build:db": "node tools/build.mjs -v -a db",
+    "build:json": "node tools/build.mjs -v -a json",
+    "version": "node tools/version-bump.mjs && git add module.json",
+    "postversion": "git push && git push --tags"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.2",
+    "fancy-log": "^2.0.0",
+    "glob": "^10.3.10",
+    "js-yaml": "^4.1.0"
+  }
+}

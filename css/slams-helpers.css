@@ -1,0 +1,10 @@
+div.slam-ask-about button.dialog-button {
+  padding: 3px;
+  margin: 1px;
+}
+
+div.slam-ask-about button.dialog-button img.slam-button-icon {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
