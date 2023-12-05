@@ -1,4 +1,4 @@
-import ModuleJson from "../module.json";
+import ModuleJson from "../module.json" assert { type: "json" };
 
 const stripFlags = [
   "ddbimporter",
