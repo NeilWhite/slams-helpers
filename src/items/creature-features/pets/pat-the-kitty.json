@@ -1,0 +1,64 @@
+{
+  "folder": "pZMggTATrbUY4ljN",
+  "name": "Pat the Kitty!",
+  "type": "feat",
+  "img": "icons/creatures/mammals/cat-hunched-glowing-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><span style=\"font-family:Signika, sans-serif\">Who's a good kitty? It's you! Yes it is!</span></p>"
+    },
+    "source": {
+      "custom": "Slam's Little Helpers",
+      "license": "MIT"
+    },
+    "activation": {
+      "type": "special"
+    },
+    "duration": {},
+    "crewed": false,
+    "target": {
+      "type": "willing",
+      "prompt": true
+    },
+    "range": {
+      "units": "touch"
+    },
+    "uses": {
+      "prompt": true
+    },
+    "consume": {
+      "scale": false
+    },
+    "critical": {},
+    "damage": {
+      "parts": []
+    },
+    "save": {
+      "scaling": "spell"
+    },
+    "type": {
+      "value": "environmentalAction"
+    },
+    "recharge": {
+      "charged": false
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.4.0",
+    "coreVersion": "11.313",
+    "createdTime": 1701490849438,
+    "modifiedTime": 1701773720678,
+    "lastModifiedBy": "SlamsHelpers0123"
+  },
+  "_id": "JfiWdlWAUYQpygHk",
+  "sort": 0,
+  "_key": "!items!JfiWdlWAUYQpygHk"
+}

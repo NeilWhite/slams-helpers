@@ -15,13 +15,6 @@ Hooks.on("init", () => {
   Hooks.on("dnd5e.useItem", measuredTemplateAuraHook);
   Hooks.on("preCreateToken", preCreateToken);
 
-  // Fix for Aura's getting stuck on
-  Hooks.on("deleteActiveEffect", async (effect) => {
-    if (effect.flags?.ActiveAuras?.isAura) {
-      await globalThis.canvas.drawings.draw();
-    }
-  });
-
   registerSettings();
 });
 

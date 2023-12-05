@@ -1,0 +1,18 @@
+{
+  "name": "Pets",
+  "sorting": "a",
+  "folder": "NeyrTWnRGoppz6d7",
+  "type": "Item",
+  "_id": "pZMggTATrbUY4ljN",
+  "sort": 0,
+  "color": "#504488",
+  "flags": {},
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.4.0",
+    "coreVersion": "11.313",
+    "modifiedTime": 1701771122261,
+    "lastModifiedBy": "SlamsHelpers0123"
+  },
+  "_key": "!folders!pZMggTATrbUY4ljN"
+}

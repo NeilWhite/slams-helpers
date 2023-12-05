@@ -37,7 +37,7 @@
   ],
   "packs": [
     {
-      "name": "slams-helpers",
+      "name": "items",
       "label": "Items",
       "path": "packs/items",
       "type": "Item",

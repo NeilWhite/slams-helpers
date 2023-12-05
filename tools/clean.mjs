@@ -5,7 +5,8 @@ const stripFlags = [
   "midiProperties",
   "midi-qol",
   "obsidian",
-  "scene-packer"
+  "scene-packer",
+  "exportSource"
 ];
 
 const cleanFlags = (flags) => {

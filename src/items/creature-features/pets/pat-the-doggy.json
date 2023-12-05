@@ -1,0 +1,65 @@
+{
+  "folder": "pZMggTATrbUY4ljN",
+  "name": "Pat the Doggy!",
+  "type": "feat",
+  "img": "icons/creatures/mammals/dog-husky-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Who's a good dog! It's you! Yes it is! Good dog.</p>"
+    },
+    "source": {
+      "custom": "Slam's Little Helpers",
+      "license": "MIT"
+    },
+    "activation": {
+      "type": "special"
+    },
+    "duration": {},
+    "crewed": false,
+    "target": {
+      "type": "willing",
+      "prompt": true
+    },
+    "range": {
+      "units": "touch"
+    },
+    "uses": {
+      "prompt": true
+    },
+    "consume": {
+      "scale": false
+    },
+    "critical": {},
+    "damage": {
+      "parts": []
+    },
+    "save": {
+      "scaling": "spell"
+    },
+    "type": {
+      "value": "environmentalAction"
+    },
+    "recharge": {
+      "charged": false
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "NvDQEmUq1G4McGRe": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.4.0",
+    "coreVersion": "11.313",
+    "createdTime": 1701490849438,
+    "modifiedTime": 1701773940793,
+    "lastModifiedBy": "SlamsHelpers0123"
+  },
+  "_id": "8fRvHiufPzgwxSTx",
+  "sort": 100000,
+  "_key": "!items!8fRvHiufPzgwxSTx"
+}

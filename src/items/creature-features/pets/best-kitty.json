@@ -1,0 +1,103 @@
+{
+  "folder": "pZMggTATrbUY4ljN",
+  "name": "Best Kitty",
+  "type": "feat",
+  "img": "icons/commodities/treasure/cup-trophy-gold.webp",
+  "system": {
+    "description": {},
+    "source": {
+      "custom": "Slam's Little Helpers",
+      "license": "MIT"
+    },
+    "activation": {},
+    "duration": {},
+    "crewed": false,
+    "target": {
+      "prompt": true
+    },
+    "range": {},
+    "uses": {
+      "prompt": true
+    },
+    "consume": {
+      "scale": false
+    },
+    "critical": {},
+    "damage": {
+      "parts": []
+    },
+    "save": {
+      "scaling": "spell"
+    },
+    "type": {
+      "value": "monster"
+    },
+    "recharge": {
+      "charged": false
+    }
+  },
+  "effects": [
+    {
+      "name": "Near a Cat",
+      "icon": "icons/creatures/mammals/cat-hunched-glowing-red.webp",
+      "origin": "Item.AyoCeWGJQe3MhVhX",
+      "duration": {},
+      "transfer": true,
+      "disabled": false,
+      "_id": "sgda4FQZAE7abzXj",
+      "changes": [
+        {
+          "key": "macro.createItem",
+          "mode": 0,
+          "value": "Compendium.slams-helpers.items.Item.JfiWdlWAUYQpygHk",
+          "priority": 20
+        }
+      ],
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "dontApply": false,
+          "stackable": "noneName",
+          "showIcon": false,
+          "macroRepeat": "none",
+          "specialDuration": []
+        },
+        "ActiveAuras": {
+          "isAura": true,
+          "aura": "All",
+          "radius": "7",
+          "ignoreSelf": true,
+          "height": false,
+          "hidden": false,
+          "displayTemp": true,
+          "hostile": false,
+          "onlyOnce": false,
+          "wallsBlock": "system"
+        }
+      },
+      "_key": "!items.effects!stLkQXsm2zmxpqpd.sgda4FQZAE7abzXj"
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.4.0",
+    "coreVersion": "11.313",
+    "createdTime": 1701490947821,
+    "modifiedTime": 1701773957903,
+    "lastModifiedBy": "SlamsHelpers0123"
+  },
+  "_id": "stLkQXsm2zmxpqpd",
+  "sort": 300000,
+  "_key": "!items!stLkQXsm2zmxpqpd"
+}
