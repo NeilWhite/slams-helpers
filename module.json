@@ -1,7 +1,7 @@
 {
   "id": "slams-helpers",
   "title": "Slam's Little Helpers",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
@@ -32,7 +32,9 @@
       }
     ]
   },
-  "styles": [ "css/slams-helpers.css" ],
+  "styles": [
+    "css/slams-helpers.css"
+  ],
   "packs": [
     {
       "name": "slams-helpers",
@@ -64,5 +66,5 @@
   "manifest": "https://github.com/neilwhite/slams-helpers/releases/latest/download/module.json",
   "readme": "https://raw.githubusercontent.com/neilwhite/slams-helpers/main/README.md",
   "url": "https://github.com/neilwhite/slams-helpers",
-  "download": "https://github.com/neilwhite/slams-helpers/releases/download/v0.2.2/slams-helpers.zip"
+  "download": "https://github.com/neilwhite/slams-helpers/releases/download/v0.3.0/slams-helpers.zip"
 }
