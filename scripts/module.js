@@ -4,7 +4,7 @@ import { preCreateToken } from "./token-hooks.js";
 import { measuredTemplateAuraHook, autoSelfEffectHook } from "./use-item.js";
 
 Hooks.on("init", () => {
-  PHB.log("Initializing!");
+  MODULE.log("Initializing!");
   globalThis.CONFIG.DND5E.consumableTypes.conjuredEffect = "Conjured Effect";
   globalThis.SlamsHelpers = MacroHelpers
 
