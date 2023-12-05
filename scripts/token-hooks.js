@@ -1,6 +1,6 @@
 import { Settings } from "./config.js";
 
-export const preCreateToken = (token, data, options, userId) => {
+export const preCreateToken = async (token, data, options, userId) => {
   if (!Settings.autoVision) return;
 
   const senses = token.actor?.system?.attributes?.senses;
@@ -18,4 +18,6 @@ export const preCreateToken = (token, data, options, userId) => {
   if (senses.truesight) detectionModes.push({ id: "seeInvisibility", enabled: true, range: senses.truesight });
   if (senses.blindsight) detectionModes.push({ id: "blindsight", enabled: true, range: senses.blindsight });
   if (detectionModes.length) changes["detectionModes"] = detectionModes;
+
+  await token.updateSource(changes);
 }

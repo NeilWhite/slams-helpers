@@ -6,7 +6,10 @@ import { measuredTemplateAuraHook, autoSelfEffectHook } from "./use-item.js";
 Hooks.on("init", () => {
   MODULE.log("Initializing!");
   globalThis.CONFIG.DND5E.consumableTypes.conjuredEffect = "Conjured Effect";
-  globalThis.SlamsHelpers = MacroHelpers
+  globalThis.CONFIG.DND5E.featureTypes.environmentalAction = { label: "Environmental Action" }
+
+  // phb should be removed once I fix lim's game
+  globalThis.phb = globalThis.SlamsHelpers = MacroHelpers
 
   Hooks.on("dnd5e.useItem", autoSelfEffectHook);
   Hooks.on("dnd5e.useItem", measuredTemplateAuraHook);

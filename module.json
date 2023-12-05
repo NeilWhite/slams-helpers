@@ -32,7 +32,7 @@
       }
     ]
   },
-  "styles": [],
+  "styles": [ "css/slams-helpers.css" ],
   "packs": [
     {
       "name": "slams-helpers",
@@ -48,7 +48,7 @@
   ],
   "packFolders": [
     {
-      "name": "Slam's Helpers",
+      "name": "Slam's Content",
       "sorting": "m",
       "color": "#de9b16",
       "packs": [
