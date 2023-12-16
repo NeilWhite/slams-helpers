@@ -29,11 +29,23 @@
         "id": "ATL",
         "type": "module",
         "compatibility": {}
+      },
+      {
+        "id": "monks-active-tiles",
+        "type": "module"
       }
     ]
   },
   "styles": [
     "css/slams-helpers.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
   ],
   "packs": [
     {
@@ -55,7 +67,8 @@
       "color": "#de9b16",
       "packs": [
         "slams-helpers"
-      ]
+      ],
+      "folders": []
     }
   ],
   "esmodules": [

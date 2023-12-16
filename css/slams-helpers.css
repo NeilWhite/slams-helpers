@@ -8,3 +8,22 @@ div.slam-ask-about button.dialog-button img.slam-button-icon {
   height: 32px;
   vertical-align: middle;
 }
+
+article.slam-scroll {
+  max-width: 500px;
+  padding: 10%;
+  margin: 20px;
+  background-color: #EAEBE1;
+  text-align: center;
+  position: relative;
+}
+
+article.slam-scroll h1 {
+  font-family: 'Modesto Condensed', 'Palatino Linotype', serif;
+  border-bottom: 2px solid black;
+}
+
+span.slam-reference {
+  font-weight: bold;
+  font-style: italic;
+}

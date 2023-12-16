@@ -1,12 +1,16 @@
 export const MODULE = {
   get name() { return "slams-helpers" },
+  get prefix() { return "SLAMS-HELPERS" },
   log: (...args) => console.log(`${MODULE.name} | `, ...args)
 };
+
+export const L = (locString) => game.i18n.localize(locString[0] === "." ? `${MODULE.prefix}${locString}` : locString);
 
 const SETTINGS_NAMES = {
   AUTO_SELF_EFFECT: "autoSelfEffect",
   APPLY_MEASUREMENT_AURAS: "applyMeasurementAura",
-  SET_TOKEN_VISION: "autoVision"
+  SET_TOKEN_VISION: "autoVision",
+
 };
 
 export const Settings = {
