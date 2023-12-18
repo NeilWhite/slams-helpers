@@ -1,4 +1,19 @@
 {
     "SLAMS-HELPERS.actions.groupName": "Slam's Helpers",
-    "SLAMS-HELPERS.actions.cleanscene": "Delete all Scene Tokens"
+    "SLAMS-HELPERS.actions.cleanscene": "Delete all Scene Tokens",
+
+    "SLAMS-HELPERS.dragon.black": "Black",
+    "SLAMS-HELPERS.dragon.blue": "Blue",
+    "SLAMS-HELPERS.dragon.brass": "Brass",
+    "SLAMS-HELPERS.dragon.bronze": "Bronze",
+    "SLAMS-HELPERS.dragon.copper": "Copper",
+    "SLAMS-HELPERS.dragon.gold": "Gold",
+    "SLAMS-HELPERS.dragon.green": "Green",
+    "SLAMS-HELPERS.dragon.red": "Red",
+    "SLAMS-HELPERS.dragon.silver": "Silver",
+    "SLAMS-HELPERS.dragon.white": "White",
+
+    "SLAMS-HELPERS.consumableTypes.conjuredEffect": "Conjured Effect",
+    "SLAMS-HELPERS.featureTypes.environmentalActions": "Environmental Action",
+    "SLAMS-HELPERS.skills.vibe": "Vibe"
 }

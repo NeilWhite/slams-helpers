@@ -1,4 +1,4 @@
-import { MODULE } from "./config.js";
+import { MODULE, L } from "./config.js";
 
 const FIELD = {
   transient: "transient",
@@ -19,6 +19,49 @@ export const DAMAGE_ICONS = {
   radiant: "icons/magic/light/beam-rays-orange-large.webp",
   slashing: "icons/skills/melee/strike-sword-steel-yellow.webp",
   thunder: "icons/magic/lightning/orb-ball-purple.webp"
+};
+
+export const DRAGON_COLORS = {
+  black: { label: ".dragon.black", damage: "acid" },
+  blue: { label: ".dragon.blue", damage: "lightning" },
+  brass: { label: ".dragon.brass", damage: "fire" },
+  bronze: { label: ".dragon.bronze", damage: "lightning" },
+  copper: { label: ".dragon.copper", damage: "acid" },
+  gold: { label: ".dragon.gold", damage: "fire" },
+  green: { label: ".dragon.green", damage: "poison" },
+  red: { label: ".dragon.red", damage: "fire" },
+  silver: { label: ".dragon.silver", damage: "cold" },
+  white: { label: ".dragon.white", damage: "cold" }
+};
+
+export const FAVOURED_ENEMY = {
+  aberration: { languages: ["deepspeak"], img: "icons/creatures/abilities/dragon-breath-purple.webp" },
+  beast: { img: "icons/creatures/abilities/bear-roar-bite-brown.webp" },
+  celestial: { languages: ["celestial"], img: "icons/magic/holy/angel-winged-humanoid-blue.webp" },
+  construct: { img: "icons/creatures/magical/construct-stone-earth-gray.webp" },
+  dragon: { languages: ["draconic"], img: "icons/creatures/abilities/dragon-ice-breath-blue.webp" },
+  elemental: { languages: ["aquan", "auran", "ignan", "terran"], img: "icons/creatures/magical/spirit-mischief-fire-blue.webp" },
+  fey: { img: "icons/creatures/magical/fae-fairy-winged-glowing-green.webp" },
+  fiend: { languages: ["infernal"], img: "icons/creatures/unholy/demon-hairy-winged-pink.webp" },
+  giant: { languages: ["giant"], img: "icons/magic/earth/strike-fist-stone-gray.webp" },
+  monstrosity: { img: "icons/creatures/abilities/mouth-teeth-crooked-blue.webp" },
+  ooze: { img: "icons/creatures/slimes/slime-face-melting-green.webp" },
+  plant: { img: "icons/magic/nature/tree-animated-smile.webp" },
+  undead: { img: "icons/magic/death/hand-undead-skeleton-fire-pink.webp" },
+
+  humanoid: {
+    img: "icons/environment/people/infantry-army.webp",
+    types: {
+      gnoll: { languages: ["gnoll"] },
+      gith: { languages: ["gith"] },
+      goblin: { languages: ["goblin"] },
+      dwarf: { languages: ["dwarvish"] },
+      elf: { languages: ["elvish"] },
+      gnome: { languages: ["gnomish"] },
+      halfling: { languages: ["halfling"] },
+      orc: { languages: ["orc"] }
+    }
+  }
 }
 
 const getFlag = (document, flag) => document.getFlag(MODULE.name, flag);
@@ -35,6 +78,8 @@ const apply = async (effect, actor, origin) => {
 }
 
 export const MacroHelpers = {
+  DRAGON_COLORS,
+  DAMAGE_ICONS,
 /**
  * @param {Actor} actor - actor to create the Item for
  * @param {uuid} itemUuid - Uuid of the item to create
@@ -126,7 +171,7 @@ export const MacroHelpers = {
    * @returns {Promise<{ id, label}>} users choice
    */
   askAboutDamageTypes: async (items, options = {}) => {
-      const choices = items.map(id => ({
+    const choices = items.map(id => ({
       id,
       img: DAMAGE_ICONS[id],
       name: CONFIG.DND5E.damageTypes[id]
@@ -135,6 +180,24 @@ export const MacroHelpers = {
     options.title = options.title ?? "Pick Damage Type";
 
     return MacroHelpers.askAbout(choices, options)
+  },
+
+  /**
+   * @param {Boolean} options.cancel - show a Cancel button
+   * @param {String} options.title - Provide the title of the dialog
+   * @returns {Promise<{ id, name, damage }>} users choice
+   */
+  askAboutDragons: async (options = {}) => {
+    const choices = Object.entries(DRAGON_COLORS).map(([id, v]) => ({
+      id,
+      img: DAMAGE_ICONS[v.damage],
+      name: L(v.label),
+      damage: v.damage
+    }));
+
+    options.title = options.title ?? "Pick Dragon Type";
+
+    return MacroHelpers.askAbout(choices, options);
   },
 
   /**
