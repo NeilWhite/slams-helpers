@@ -32,7 +32,8 @@
       },
       {
         "id": "monks-active-tiles",
-        "type": "module"
+        "type": "module",
+        "compatibility": {}
       }
     ]
   },
@@ -58,6 +59,17 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "journals",
+      "label": "Journals",
+      "path": "packs/journals",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e"
     }
   ],
   "packFolders": [

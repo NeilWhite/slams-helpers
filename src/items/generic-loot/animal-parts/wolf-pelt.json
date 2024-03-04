@@ -1,0 +1,45 @@
+{
+  "folder": "pAV1pegoanF0GdmD",
+  "name": "Wolf Pelt",
+  "type": "loot",
+  "_id": "SQLZBujuxq9HHaXr",
+  "img": "icons/commodities/leather/fur-pelt-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>The pelt of a wolf, a tanner could preserve it for you, or may offer a fair price.</p>"
+    },
+    "source": {
+      "custom": "Slam's Little Helpers",
+      "license": "MIT"
+    },
+    "quantity": 1,
+    "weight": 5,
+    "price": {
+      "value": 7,
+      "denomination": "gp"
+    },
+    "attunement": 0,
+    "equipped": false,
+    "rarity": "common",
+    "identified": true,
+    "type": {
+      "value": "material"
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NvDQEmUq1G4McGRe": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.4.0",
+    "coreVersion": "11.313",
+    "createdTime": 1702015962341,
+    "modifiedTime": 1702016332823,
+    "lastModifiedBy": "SlamsHelpers0123"
+  },
+  "_key": "!items!SQLZBujuxq9HHaXr"
+}

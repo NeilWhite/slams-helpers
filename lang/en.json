@@ -15,5 +15,8 @@
 
     "SLAMS-HELPERS.consumableTypes.conjuredEffect": "Conjured Effect",
     "SLAMS-HELPERS.featureTypes.environmentalActions": "Environmental Action",
-    "SLAMS-HELPERS.skills.vibe": "Vibe"
+    "SLAMS-HELPERS.skills.vibe": "Vibe",
+
+    "SLAMS-HELPERS.feats.piercer.name": "Piercer",
+    "SLAMS-HELPERS.feats.piercer.hint": "Adds an additional dice to crits with piercing damage"
 }

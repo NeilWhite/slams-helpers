@@ -9,7 +9,6 @@ export const preCreateToken = async (token, data, options, userId) => {
   const changes = {};
 
   if (senses.darkvision) {
-    changes["sight.visionMode"] = "darkvision";
     changes["sight.range"] = senses.darkvision;
   }
 

@@ -1,0 +1,70 @@
+{
+  "name": "Vibe Check",
+  "flags": {
+    "monks-enhanced-journal": {
+      "pagetype": "rule",
+      "img": "modules/monks-enhanced-journal/assets/rule.png"
+    },
+    "core": {}
+  },
+  "pages": [
+    {
+      "type": "rule",
+      "name": "Vibe",
+      "_id": "LDa2BJ9CusjpjLgN",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p><strong>Vibe.</strong> Your Charisma (Vibe) check allows you to identify weather the vibes are fucked.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "system": {
+        "tooltip": "<p>Your Charisma (Vibe) check allows you to identify weather the vibes are fucked.</p>",
+        "type": "skill"
+      },
+      "sort": 0,
+      "ownership": {
+        "default": -1,
+        "NvDQEmUq1G4McGRe": 3
+      },
+      "flags": {
+        "monks-enhanced-journal": {
+          "appendix": false,
+          "pagetype": "rule",
+          "img": "modules/monks-enhanced-journal/assets/rule.png"
+        }
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "3.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1709538793371,
+        "modifiedTime": 1709539559344,
+        "lastModifiedBy": "NvDQEmUq1G4McGRe"
+      },
+      "_key": "!journal.pages!YxW6DzkluQh4vWeQ.LDa2BJ9CusjpjLgN"
+    }
+  ],
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "3.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1709538793332,
+    "modifiedTime": 1709539559344,
+    "lastModifiedBy": "SlamsHelpers0123"
+  },
+  "_id": "YxW6DzkluQh4vWeQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NvDQEmUq1G4McGRe": 3
+  },
+  "_key": "!journal!YxW6DzkluQh4vWeQ"
+}
