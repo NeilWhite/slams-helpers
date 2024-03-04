@@ -1,6 +1,14 @@
+
+const isPiercing = (item, config) => {
+  if (config.rollConfigs && config.rollConfigs.some(v => v.type === "piercing")) return true;
+  if (item.system.damage.some(v => v[1] === "piercing")) return true;
+  return false;
+}
+
 export const dnd5e_preRollDamage = (item, config) => {
   if (item.actor.getFlag("dnd5e", "piercer")) {
-    if (config.rollConfigs.some(v => v.type === "piercing")) config.criticalBonusDice = (config.criticalBonusDice ?? 0) + 1;
-    console.log("pierce-daddy", { item, config });
+     if (isPiercing(item, config)) {
+      config.criticalBonusDice = (config.criticalBonusDice ?? 0) + 1;
+    }
   }
 }
