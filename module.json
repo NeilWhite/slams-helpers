@@ -78,7 +78,8 @@
       "sorting": "m",
       "color": "#de9b16",
       "packs": [
-        "slams-helpers"
+        "slams-helpers",
+        "journals"
       ],
       "folders": []
     }
