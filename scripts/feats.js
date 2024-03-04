@@ -1,7 +1,7 @@
 
 const isPiercing = (item, config) => {
   if (config.rollConfigs && config.rollConfigs.some(v => v.type === "piercing")) return true;
-  if (item.system.damage.some(v => v[1] === "piercing")) return true;
+  if (item.system.damage.parts.some(v => v[1] === "piercing")) return true;
   return false;
 }
 
