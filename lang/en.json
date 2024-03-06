@@ -1,22 +1,39 @@
 {
-    "SLAMS-HELPERS.actions.groupName": "Slam's Helpers",
-    "SLAMS-HELPERS.actions.cleanscene": "Delete all Scene Tokens",
+  "SLAMS-HELPERS": {
+    "setting": {
+      "vibe": { "name": "Vibe", "hint": "Adds an additional skill: Vibe (cha)" },
+      "flagHandling": { "name": "Custom flags.dnd5e hook", "hint": "allows you to use class @scale values in auras that set flags.dnd5e.values" },
+      "autoVision": { "name": "Auto token vision", "hint": "Sets token vision based on current senses when creating a token from an actor" },
+      "autoEffects": { "name": "Auto Effects", "hint": "Automatically apply 'self' targeted effects on cast (requires DAE and RSR5E)" }
+    },
 
-    "SLAMS-HELPERS.dragon.black": "Black",
-    "SLAMS-HELPERS.dragon.blue": "Blue",
-    "SLAMS-HELPERS.dragon.brass": "Brass",
-    "SLAMS-HELPERS.dragon.bronze": "Bronze",
-    "SLAMS-HELPERS.dragon.copper": "Copper",
-    "SLAMS-HELPERS.dragon.gold": "Gold",
-    "SLAMS-HELPERS.dragon.green": "Green",
-    "SLAMS-HELPERS.dragon.red": "Red",
-    "SLAMS-HELPERS.dragon.silver": "Silver",
-    "SLAMS-HELPERS.dragon.white": "White",
+    "actions": {
+      "groupName": "Slam's Helpers",
+      "cleanscene": "Delete all Scene Tokens"
+    },
 
-    "SLAMS-HELPERS.consumableTypes.conjuredEffect": "Conjured Effect",
-    "SLAMS-HELPERS.featureTypes.environmentalActions": "Environmental Action",
-    "SLAMS-HELPERS.skills.vibe": "Vibe",
+    "dragon": {
+      "black": "Black",
+      "blue": "Blue",
+      "brass": "Brass",
+      "bronze": "Bronze",
+      "copper": "Copper",
+      "gold": "Gold",
+      "green": "Green",
+      "red": "Red",
+      "silver": "Silver",
+      "white": "White"
+    },
 
-    "SLAMS-HELPERS.feats.piercer.name": "Piercer",
-    "SLAMS-HELPERS.feats.piercer.hint": "Adds an additional dice to crits with piercing damage"
+    "consumableTypes.conjuredEffect": "Conjured Effect",
+    "featureTypes.environmentalActions": "Environmental Action",
+    "skills.vibe": "Vibe",
+
+    "feats": {
+      "piercer": {
+        "name": "Piercer",
+        "hint": "Adds an additional dice to crits with piercing damage"
+      }
+    }
+  }
 }
