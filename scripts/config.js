@@ -5,6 +5,8 @@ export const MODULE = {
 };
 
 export const CONFIG = globalThis.CONFIG;
+export const libWrapper = globalThis.libWrapper;
+
 export const L = (locString) => game.i18n.localize(locString[0] === "." ? `${MODULE.prefix}${locString}` : locString);
 
 const SETTINGS_NAMES = {

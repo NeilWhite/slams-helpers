@@ -35,6 +35,12 @@
         "type": "module",
         "compatibility": {}
       }
+    ],
+    "requires": [
+      {
+        "id": "lib-wrapper",
+        "type": "module"
+      }
     ]
   },
   "styles": [
@@ -65,11 +71,11 @@
       "label": "Journals",
       "path": "packs/journals",
       "type": "JournalEntry",
+      "system": "dnd5e",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "system": "dnd5e"
+      }
     }
   ],
   "packFolders": [

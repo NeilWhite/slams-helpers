@@ -13,9 +13,21 @@ export const customFlagsHandling = (actor, change, current, delta, changes) => {
 }
 
 const hasDamageType = (type) => (item, config) => {
-  if (config.rollConfigs && config.rollConfigs.some(v => v.type === "piercing")) return true;
-  if (item.system.damage.parts.some(v => v[1] === "piercing")) return true;
-  return false;
+  var types = getDamageTypes(item, config);
+  return types.includes(type);
+}
+
+const getDamageTypes = (item, config) => {
+  // 3.x.x
+  if (config.rollConfigs) return config.rollConfigs.map(v => v.type);
+  // 2.4.x
+  if (item.system.damage.parts) return item.system.damage.parts.map(v => v[1]).filter(v => !!v);
+  return [];
+}
+
+const addDamage = (config, damage, type) => {
+  if (config.rollConfigs) config.rollConfigs.push({ parts: [damage], type });
+  else if (config.parts) config.parts.push(`${damage}`);
 }
 
 const isPiercing = hasDamageType("piercing");
@@ -23,23 +35,19 @@ const isBludgeoning = hasDamageType("bludgeoning");
 const isSlashing = hasDamageType("slashing");
 
 export const dnd5e_preRollDamage = (item, config) => {
-  if (item.actor.getFlag("dnd5e", "piercer") && isPiercing(item, config)) {
+  const { piercer } = item.actor.flags?.dnd5e ?? {};
+
+  if (piercer && isPiercing(item, config)) {
     config.criticalBonusDice = (config.criticalBonusDice ?? 0) + 1;
   }
 }
 
-export const dnd5e_rollDamge = (item, config) => {
-  MODULE.log("rollDamage", { item, config });
-}
+export const dnd5e_actor_prePrepareData = (actor) => {
+  const { toolExpertise } = actor.flags?.dnd5e ?? {};
 
-export const dnd5e_renderChatMessage = (message, html) => {
-  MODULE.log("renderChatMessage", { message, html });
-}
-
-export const dnd5e_preDisplayCard = (item, chatData, options) => {
-  MODULE.log("preDisplayCard", { item, chatData, options });
-}
-
-export const dnd5e_useItem = (item, config, options) => {
-  MODULE.log("useItem", { item, config, options });
+  if (actor.system.tools) {
+    for (const tool of Object.values(actor.system.tools)) {
+      if (toolExpertise && tool.value === 1) tool.value = 2;
+    }
+  }
 }

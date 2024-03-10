@@ -34,6 +34,12 @@
         "name": "Piercer",
         "hint": "Adds an additional dice to crits with piercing damage"
       }
+    },
+    "classFeatures": {
+      "toolExpertise": {
+        "name": "Tool Expertise",
+        "hint": "Double your proficiency bonus with tools you are proficient with (libWrapper required)"
+      }
     }
   }
 }
