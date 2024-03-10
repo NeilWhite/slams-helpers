@@ -46,7 +46,7 @@ export const dnd5e_preRollDamage = (item, config) => {
  * seems like overrides aren't applied to flags before prepareData is called, so lets look there first
  */
 const getFlagWithOverride = (document, scope, key) => {
-  const override = getProperty(`overrides.flags.${scope}.${key}`)
+  const override = getProperty(document, `overrides.flags.${scope}.${key}`)
   if (typeof(override) !== "undefined") return override;
   return document.getFlag(scope, key);
 }
