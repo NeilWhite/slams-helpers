@@ -42,6 +42,19 @@ export const dnd5e_preRollDamage = (item, config) => {
   }
 }
 
+export const dnd5e_preRollHitDie = (actor, rollConfig, denomination) => {
+  const { minHitDieRestore } = actor.flags?.dnd5e ?? {};
+
+  if (minHitDieRestore) {
+    rollConfig.formula = `max(${minHitDieRestore}, ${rollConfig.formula})`;
+  }
+}
+
+export const dnd5e_preRollSkill = (actor, rollConfig, skillId) => {
+  const { reliable } = actor.flags?.dnd5e ?? {};
+  rollConfig.reliableTalent ||= reliable[skillId];
+}
+
 /**
  * seems like overrides aren't applied to flags before prepareData is called, so lets look there first
  */
@@ -51,12 +64,14 @@ const getFlagWithOverride = (document, scope, key) => {
   return document.getFlag(scope, key);
 }
 
-export const dnd5e_actor_prePrepareData = (actor) => {
-  const toolExpertise = getFlagWithOverride(actor, "dnd5e", "toolExpertise");
+export const dnd5e_actor_prepareTools = function(wrapper, ...args) {
+  const toolExpertise = getFlagWithOverride(this, "dnd5e", "toolExpertise");
 
-  if (actor.system.tools) {
-    for (const tool of Object.values(actor.system.tools)) {
+  if (this.system.tools) {
+    for (const tool of Object.values(this.system.tools)) {
       if (toolExpertise && tool.value === 1) tool.value = 2;
     }
   }
+
+  wrapper(...args);
 }

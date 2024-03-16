@@ -29,10 +29,19 @@
     "featureTypes.environmentalActions": "Environmental Action",
     "skills.vibe": "Vibe",
 
+    "section": {
+      "feats": "Feats",
+      "classFeatures": "Class Features"
+    },
+
     "feats": {
       "piercer": {
         "name": "Piercer",
         "hint": "Adds an additional dice to crits with piercing damage"
+      },
+      "minHitDieRestore": {
+        "name": "Min Regen from Hit Die",
+        "hint": "Lowest amount restored using a hit die on short rest (ie: Durable)"
       }
     },
     "classFeatures": {
