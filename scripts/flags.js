@@ -1,4 +1,4 @@
-import { MODULE, CONFIG } from "./config.js";
+import { MODULE, CONFIG, Settings } from "./config.js";
 
 export const customFlagsHandling = (actor, change, current, delta, changes) => {
   const data = CONFIG.DND5E.characterFlags[change.key.replace("flags.dnd5e.", "")];
@@ -35,7 +35,7 @@ const isBludgeoning = hasDamageType("bludgeoning");
 const isSlashing = hasDamageType("slashing");
 
 export const dnd5e_preRollDamage = (item, config) => {
-  const { piercer } = item.actor.flags?.dnd5e ?? {};
+  const { piercer } = item?.actor?.flags?.dnd5e ?? {};
 
   if (piercer && isPiercing(item, config)) {
     config.criticalBonusDice = (config.criticalBonusDice ?? 0) + 1;
@@ -50,9 +50,17 @@ export const dnd5e_preRollHitDie = (actor, rollConfig, denomination) => {
   }
 }
 
+const _modifiers = KeyboardManager.MODIFIER_KEYS;
+
+
+export const dnd5e_preUseItem = (item, config, options) => {
+  MODULE.log({ item, config, options });
+  options.configureDialog = options.configureDialog ^ Settings.invertConfigShift;
+}
+
 export const dnd5e_preRollSkill = (actor, rollConfig, skillId) => {
   const { reliable } = actor.flags?.dnd5e ?? {};
-  rollConfig.reliableTalent ||= reliable[skillId];
+  rollConfig.reliableTalent ||= reliable?.[skillId];
 }
 
 /**

@@ -27,3 +27,17 @@ span.slam-reference {
   font-weight: bold;
   font-style: italic;
 }
+
+.slam-smaller .dice-roll .dice-total {
+  font-size: var(--font-size-20);
+  padding: 0;
+}
+
+.slam-smaller .dnd5e2 button {
+  font-size: var(--font-size-10);
+  padding: 0;
+}
+
+.slam-smaller .tooltip-part .dice {
+  font-size: var(--font-size-10);
+}

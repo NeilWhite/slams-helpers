@@ -8,8 +8,10 @@ import {
   dnd5e_preRollDamage,
   dnd5e_actor_prepareTools,
   dnd5e_preRollHitDie,
-  dnd5e_preRollSkill
+  dnd5e_preRollSkill,
+  dnd5e_preUseItem
 } from "./flags.js";
+import { dnd5e_renderChatMessage } from "./chat.js";
 
 Hooks.on("setupTileActions", ActionTriggers.registerActions);
 
@@ -36,7 +38,8 @@ const configureFeats = () => {
     toolExpertise: makeClassFeature("toolExpertise", Boolean),
   });
 
-  CONFIG.ActiveEffect.documentClass.FORMULA_FIELDS.add(`flags.dnd5e.durable`);
+  if (CONFIG.ActiveEffect.documentClass.FORMULA_FIELDS)
+    CONFIG.ActiveEffect.documentClass.FORMULA_FIELDS.add(`flags.dnd5e.durable`);
 }
 
 Hooks.once("init", () => {
@@ -70,6 +73,8 @@ Hooks.once("init", () => {
   Hooks.on("dnd5e.preRollDamage", dnd5e_preRollDamage);
   Hooks.on("dnd5e.preRollHitDie", dnd5e_preRollHitDie);
   Hooks.on("dnd5e.preRollSkill", dnd5e_preRollSkill);
+  Hooks.on("dnd5e.preUseItem", dnd5e_preUseItem);
+  Hooks.on("dnd5e.renderChatMessage", dnd5e_renderChatMessage);
 
   if (libWrapper) {
     libWrapper.register(MODULE.name, "CONFIG.Actor.documentClass.prototype._prepareTools", dnd5e_actor_prepareTools, "WRAPPER");

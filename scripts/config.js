@@ -14,7 +14,8 @@ const SETTINGS_NAMES = {
   APPLY_MEASUREMENT_AURAS: "applyMeasurementAura",
   SET_TOKEN_VISION: "autoVision",
   VIBE_CHECK: "vibeCheck",
-  CUSTOM_FLAG_HANDLING: "customFlag"
+  CUSTOM_FLAG_HANDLING: "customFlag",
+  SMALLER_CHAT: "smallerChat",
 };
 
 export const Settings = {
@@ -22,7 +23,8 @@ export const Settings = {
   get applyMeasurementAura() { return game.settings.get(MODULE.name, SETTINGS_NAMES.APPLY_MEASUREMENT_AURAS); },
   get autoVision() { return game.settings.get(MODULE.name, SETTINGS_NAMES.SET_TOKEN_VISION); },
   get vibeCheck() { return game.settings.get(MODULE.name, SETTINGS_NAMES.VIBE_CHECK); },
-  get customFlag() { return game.settings.get(MODULE.name, SETTINGS_NAMES.CUSTOM_FLAG_HANDLING); }
+  get customFlag() { return game.settings.get(MODULE.name, SETTINGS_NAMES.CUSTOM_FLAG_HANDLING); },
+  get smallerChat() { return game.settings.get(MODULE.name, SETTINGS_NAMES.SMALLER_CHAT); }
 }
 
 export const registerSettings = () => {
@@ -74,5 +76,14 @@ export const registerSettings = () => {
     config: true,
     default: true,
     requiresReload: true
+  })
+
+  game.settings.register(MODULE.name, SETTINGS_NAMES.SMALLER_CHAT, {
+    name: L(".setting.smallerChat.name"),
+    hint: L(".setting.smallerChat.hint"),
+    scope: "client",
+    type: Boolean,
+    config: true,
+    default: true
   })
 }
