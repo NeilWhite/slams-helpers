@@ -1,0 +1,54 @@
+{
+  "name": "Gunsmithing Tools",
+  "type": "tool",
+  "_id": "L5rgpxBlxJVa5JXu",
+  "img": "icons/skills/trades/smithing-tongs-metal-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>These special tools include the items needed to pursue a craft or trade in Gunsmithing.</span></p><p style=\"box-sizing:border-box;user-select:text;margin:0.5em 0px;margin-block-end:0px;color:rgb(25, 24, 19);font-family:Signika, sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;text-align:start\"><span style=\"font-family:Signika, sans-serif\">Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+    },
+    "source": {
+      "custom": "Slam's Little Helpers",
+      "license": "MIT"
+    },
+    "identified": true,
+    "unidentified": {},
+    "quantity": 1,
+    "weight": 1,
+    "price": {
+      "value": 20,
+      "denomination": "gp"
+    },
+    "rarity": "common",
+    "attunement": 0,
+    "equipped": false,
+    "type": {
+      "value": "art",
+      "baseItem": "gunsmithing"
+    },
+    "ability": "dex",
+    "properties": []
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "zkRLc6B5JKVqrDgM": 3
+  },
+  "flags": {
+    "rsr5e": {
+      "quickFooter": {
+        "value": true
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "3.1.1",
+    "coreVersion": "11.315",
+    "createdTime": 1711916706163,
+    "modifiedTime": 1711917590141,
+    "lastModifiedBy": "SlamsHelpers0123"
+  },
+  "_key": "!items!L5rgpxBlxJVa5JXu"
+}

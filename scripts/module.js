@@ -29,8 +29,6 @@ const configureFeats = () => {
     type
   });
 
-
-
   Object.assign(CONFIG.DND5E.characterFlags, {
     piercer: makeFeat("piercer", Boolean),
     minHitDieRestore: makeFeat("minHitDieRestore", String),
@@ -61,6 +59,9 @@ Hooks.once("init", () => {
   MODULE.log("Initializing!");
   CONFIG.DND5E.consumableTypes.conjuredEffect = L(".consumableTypes.conjuredEffect");
   CONFIG.DND5E.featureTypes.environmentalAction = { label: L(".featureTypes.environmentalActions") };
+  if (Settings.gunSmithing){
+    CONFIG.DND5E.toolIds.gunsmithing = "Compendium.slams-helpers.items.Item.L5rgpxBlxJVa5JXu";
+  }
 
   configureFeats();
 
