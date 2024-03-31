@@ -1,6 +1,6 @@
 {
   "name": "fvtt-slams-helpers",
-  "version": "0.8.1",
+  "version": "0.9.0",
   "description": "Misc Foundry Macro helpers, and automation",
   "main": "index.js",
   "scripts": {
