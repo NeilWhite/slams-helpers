@@ -52,12 +52,6 @@ export const dnd5e_preRollHitDie = (actor, rollConfig, denomination) => {
 
 const _modifiers = KeyboardManager.MODIFIER_KEYS;
 
-
-export const dnd5e_preUseItem = (item, config, options) => {
-  MODULE.log({ item, config, options });
-  options.configureDialog = options.configureDialog ^ Settings.invertConfigShift;
-}
-
 export const dnd5e_preRollSkill = (actor, rollConfig, skillId) => {
   const { reliable } = actor.flags?.dnd5e ?? {};
   rollConfig.reliableTalent ||= reliable?.[skillId];

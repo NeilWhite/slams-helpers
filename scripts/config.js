@@ -16,6 +16,7 @@ const SETTINGS_NAMES = {
   VIBE_CHECK: "vibeCheck",
   CUSTOM_FLAG_HANDLING: "customFlag",
   SMALLER_CHAT: "smallerChat",
+  OVERLAY_DEAD: "overlayDead",
 };
 
 export const Settings = {
@@ -24,7 +25,8 @@ export const Settings = {
   get autoVision() { return game.settings.get(MODULE.name, SETTINGS_NAMES.SET_TOKEN_VISION); },
   get vibeCheck() { return game.settings.get(MODULE.name, SETTINGS_NAMES.VIBE_CHECK); },
   get customFlag() { return game.settings.get(MODULE.name, SETTINGS_NAMES.CUSTOM_FLAG_HANDLING); },
-  get smallerChat() { return game.settings.get(MODULE.name, SETTINGS_NAMES.SMALLER_CHAT); }
+  get smallerChat() { return game.settings.get(MODULE.name, SETTINGS_NAMES.SMALLER_CHAT); },
+  get alwaysOverlayDead() { return game.settings.get(MODULE.name, SETTINGS_NAMES.OVERLAY_DEAD); }
 }
 
 export const registerSettings = () => {
@@ -86,4 +88,14 @@ export const registerSettings = () => {
     config: true,
     default: true
   })
+
+  game.settings.register(MODULE.name, SETTINGS_NAMES.OVERLAY_DEAD, {
+    name: L(".setting.overlayDead.name"),
+    hint: L(".setting.overlayDead.hint"),
+    scope: "world",
+    type: Boolean,
+    config: true,
+    default: true,
+    requiresReload: false
+  });
 }

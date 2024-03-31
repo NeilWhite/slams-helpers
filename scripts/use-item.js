@@ -27,12 +27,3 @@ export const autoSelfEffectHook = async (item, config, options) => {
   }
 };
 
-export const measuredTemplateAuraHook = async (item, config, options) => {
-  if (!Settings.applyMeasurementAura) return;
-  if (!(item.effects.size)) return;
-  const { ActiveAuras } = item.flags;
-
-  const effects = item.effects.filter(({ flags: { ActiveAuras }}, i) => ActiveAuras?.isAura);
-
-  console.log("Effects", effects)
-}

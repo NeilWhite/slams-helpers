@@ -20,3 +20,9 @@ export const preCreateToken = async (token, data, options, userId) => {
 
   await token.updateSource(changes);
 }
+
+export const createActiveEffect = (effect, ...args) => {
+    if (Settings.alwaysOverlayDead && effect.statuses?.has(CONFIG.specialStatusEffects.DEFEATED)) {
+      effect.update({ "flags.core.overlay": true });
+    }
+  }

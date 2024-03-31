@@ -5,7 +5,8 @@
       "flagHandling": { "name": "Custom flags.dnd5e hook", "hint": "allows you to use class @scale values in auras that set flags.dnd5e.values" },
       "autoVision": { "name": "Auto token vision", "hint": "Sets token vision based on current senses when creating a token from an actor" },
       "autoEffects": { "name": "Auto Effects", "hint": "Automatically apply 'self' targeted effects on cast (requires DAE and RSR5E)" },
-      "smallerChat": {"name": "Smaller Chat", "hint": "Makes rolls slighly smaller in chat cards" }
+      "smallerChat": {"name": "Smaller Chat", "hint": "Makes rolls slighly smaller in chat cards" },
+      "overlayDead": { "name": "Overlay dead status", "hint": "Makes the Dead/Defeated status effect always show as a full token overlay" }
     },
 
     "actions": {

@@ -1,6 +1,6 @@
 import { registerSettings, MODULE, L, Settings, libWrapper, CONFIG } from "./config.js";
 import { MacroHelpers } from "./macro-helpers.js";
-import { preCreateToken } from "./token-hooks.js";
+import { createActiveEffect, preCreateToken } from "./token-hooks.js";
 import { autoSelfEffectHook } from "./use-item.js";
 import { ActionTriggers } from "./trigger-actions.js";
 import {
@@ -8,8 +8,7 @@ import {
   dnd5e_preRollDamage,
   dnd5e_actor_prepareTools,
   dnd5e_preRollHitDie,
-  dnd5e_preRollSkill,
-  dnd5e_preUseItem
+  dnd5e_preRollSkill
 } from "./flags.js";
 import { dnd5e_renderChatMessage } from "./chat.js";
 
@@ -73,8 +72,8 @@ Hooks.once("init", () => {
   Hooks.on("dnd5e.preRollDamage", dnd5e_preRollDamage);
   Hooks.on("dnd5e.preRollHitDie", dnd5e_preRollHitDie);
   Hooks.on("dnd5e.preRollSkill", dnd5e_preRollSkill);
-  Hooks.on("dnd5e.preUseItem", dnd5e_preUseItem);
   Hooks.on("dnd5e.renderChatMessage", dnd5e_renderChatMessage);
+  Hooks.on("createActiveEffect", createActiveEffect);
 
   if (libWrapper) {
     libWrapper.register(MODULE.name, "CONFIG.Actor.documentClass.prototype._prepareTools", dnd5e_actor_prepareTools, "WRAPPER");
