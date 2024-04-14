@@ -28,7 +28,7 @@ jobs:
         run: npm run build:db
 
       - name: Build Module Package
-        run: zip -r ./slams-helpers.zip module.json lang/ scripts/ templates/ css/ assets/ packs/
+        run: zip -r ./slams-helpers.zip module.json lang/ scripts/ template/ css/ assets/ packs/
 
     # Create a release for this specific version
       - name: Update Release with Files
