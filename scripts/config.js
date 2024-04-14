@@ -17,7 +17,8 @@ const SETTINGS_NAMES = {
   CUSTOM_FLAG_HANDLING: ["customFlag", true],
   SMALLER_CHAT: ["smallerChat", true],
   OVERLAY_DEAD: ["overlayDead", true],
-  GUN_SMITHING: ["gunSmithing", false, true]
+  GUN_SMITHING: ["gunSmithing", false, true],
+  ROLL_QUANTITY: ["rollTableQuantity", true, true]
 };
 
 export const Settings = {
@@ -28,7 +29,8 @@ export const Settings = {
   get customFlag() { return game.settings.get(MODULE.name, SETTINGS_NAMES.CUSTOM_FLAG_HANDLING[0]); },
   get smallerChat() { return game.settings.get(MODULE.name, SETTINGS_NAMES.SMALLER_CHAT[0]); },
   get alwaysOverlayDead() { return game.settings.get(MODULE.name, SETTINGS_NAMES.OVERLAY_DEAD[0]); },
-  get gunSmithing() { return game.settings.get(MODULE.name, SETTINGS_NAMES.GUN_SMITHING[0]); }
+  get gunSmithing() { return game.settings.get(MODULE.name, SETTINGS_NAMES.GUN_SMITHING[0]); },
+  get rollTableQuantity() { return game.settings.get(MODULE.name, SETTINGS_NAMES.ROLL_QUANTITY[0]); }
 }
 
 

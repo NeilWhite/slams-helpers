@@ -11,6 +11,7 @@ import {
   dnd5e_preRollSkill
 } from "./flags.js";
 import { dnd5e_renderChatMessage } from "./chat.js";
+import { SlamsRollTableConfig } from "./rolltable-quantity.js";
 
 Hooks.on("setupTileActions", ActionTriggers.registerActions);
 
@@ -75,6 +76,13 @@ Hooks.once("init", () => {
   Hooks.on("dnd5e.preRollSkill", dnd5e_preRollSkill);
   Hooks.on("dnd5e.renderChatMessage", dnd5e_renderChatMessage);
   Hooks.on("createActiveEffect", createActiveEffect);
+
+  if (Settings.rollTableQuantity) {
+    RollTables.registerSheet(MODULE.name, SlamsRollTableConfig, { label: L(".rollTable.sheetName"), makeDefault: true });
+    if (libWrapper) {
+      libWrapper.register(MODULE.name, "CONFIG.RollTable.documentClass.prototype.getResultsForRoll", SlamsRollTableConfig.getRollResultsWrapper, "WRAPPER");
+    }
+  }
 
   if (libWrapper) {
     libWrapper.register(MODULE.name, "CONFIG.Actor.documentClass.prototype._prepareTools", dnd5e_actor_prepareTools, "WRAPPER");

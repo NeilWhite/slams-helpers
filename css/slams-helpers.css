@@ -41,3 +41,7 @@ span.slam-reference {
 .slam-smaller .tooltip-part .dice {
   font-size: var(--font-size-10);
 }
+
+a.content-link {
+  white-space: unset !important;
+}

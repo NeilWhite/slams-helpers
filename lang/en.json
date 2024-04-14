@@ -7,7 +7,13 @@
       "autoSelfEffect": { "name": "Auto Effects", "hint": "Automatically apply 'self' targeted effects on cast (requires DAE)" },
       "smallerChat": {"name": "Smaller Chat", "hint": "Makes rolls slighly smaller in chat cards" },
       "overlayDead": { "name": "Overlay dead status", "hint": "Makes the Dead/Defeated status effect always show as a full token overlay" },
-      "gunSmithing": { "name": "Gun-smithing", "hint": "add gunsmithing tool proficiency" }
+      "gunSmithing": { "name": "Gun-smithing", "hint": "add gunsmithing tool proficiency" },
+      "rollTableQuantity": { "name": "Roll-Table Quantity", "hint": "Add's an optional 'Roll Count' column to RollTables" }
+    },
+    "rollTable": {
+      "heading": "Roll Count",
+      "sheetName": "Slam's RollTable with Quantity",
+      "includeQuantity": "Configurable draw count?"
     },
 
     "actions": {
